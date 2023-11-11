@@ -4,15 +4,14 @@
 
 using namespace std;
 
-movie::movie(const char* title, const char* director, int year, int durating, int rating)
-  :media(title, year), duration(duration), rating(rating)
+movie::movie(const char *title, const char *director, int year, int durating, int rating)
+    : media(title, year), duration(duration), rating(rating)
 {
   strncpy(this->director, director, 39);
-  this->director[39] = '\0'
-    
+  this->director[39] = '\0';
 }
 
-const char* movie::getDirector() const
+const char *movie::getDirector() const
 {
   return director;
 }
@@ -26,12 +25,9 @@ int movie::getRating() const
   return rating;
 }
 
-
-const char* movie::getType() const
+const char *movie::getType() const
 {
   return "movie";
-  
-
 }
 
 void movie::printInfo() const
