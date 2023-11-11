@@ -1,3 +1,6 @@
+#ifndef MUSIC_H
+#define MUSIC_H
+
 #include <iostream>
 #include "media.h"
 
@@ -6,9 +9,17 @@ using namespace std;
 class music : public media
 {
  public:
-  char sTitle[30];
-  char artist[30];
-  char publisher[30];
-  int year;
-  int dur;
+  music(const char* title, const char* artist, int year, int duration, const char* publisher);
+  const char* getArtist() const;
+  int getDuration() const;
+  const char* getPublisher() const;
+  const char* getType() const;
+  void printInfo() const;
+private:
+  char artist[40];
+  int duration;
+  char publisher[40];
+  
 };
+
+#endif MUSIC_H
